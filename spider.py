@@ -18,7 +18,6 @@ def get(url, path):
 		for child in files + folders:
 			get(url + child, path + child)
 	else:
-		pass
 		os.system('wget {url} -O {path}'.format(url=url, path=urllib.parse.unquote(path)))
 
 if __name__ == '__main__':
